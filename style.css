@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: white;
+}
+
+#main {
+    background-image: url('./imgs/backgroundMobile.png');
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+nav {
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 60%;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: fit-content;
+    display: flex;
+    transition: 600ms;
+}
+
+#sidebarHalf1 {
+    position: relative;
+    width: 40vw;
+    background-color: white;
+}
+
+#sidebarHalf2 {
+    display: none;
+    width: 60vw;
+}
+
+#sidebarAnchors {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    align-items: center;
+    gap: 2vh;
+}
+
+#sidebarAnchors a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+#closeSidebar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 200;
+}
+
+#slider{
+    width: 80vw;
+    height: 30vh;
+    background-color: #FFFFFF00;
+    margin: 5vh auto 0px;
+    border: 3px solid white;
+    border-radius: 10px;
+    position: relative;
+}
+
+#sliderPosition{
+    position: absolute;
+}
+
+.sliderPositionCount{
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 100px;
+}
