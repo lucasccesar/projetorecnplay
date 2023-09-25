@@ -24,10 +24,12 @@ function expand(event){
     let dropDown = document.querySelector("#linhaDoTempo svg")
     dropDown.style.transition = '400ms'
     if(sibling.style.height == '' || sibling.style.height == "0px"){
+        teste.parentElement.style.marginTop = '2vw'
         sibling.style.height = `${teste.offsetHeight}px`
         dropDown.style.rotate = '-180deg'
     } else{
         sibling.style.height = `0px`
+        teste.parentElement.style.marginTop = '0vw'
         dropDown.style.rotate = '0deg'
     }
 }

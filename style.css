@@ -99,7 +99,6 @@ nav {
     display: flex;
     justify-content: flex-end;
     height: 0px;
-    margin-top: 2vw;
     overflow: hidden;
 }
 
@@ -412,13 +411,29 @@ nav {
     height: fit-content;
 }
 
-#main5 img {
+#quemSomosTitle{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2vw;
-    width: 80vw;
+    width: 60vw;
     margin: 5vw auto 5vw;
+}
+
+#x {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+    width: 30vw;
+    margin: 5vw auto 5vw;
+}
+
+#quemSomosText {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 90vw;
+    margin: 0px auto 5vw;
 }
 
 .photoDiv {
@@ -462,7 +477,7 @@ footer {
     font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     #main {
         background-image: url(imgs/backgroundDesktop.png);
     }
@@ -532,7 +547,7 @@ footer {
         font-size: 2.5rem;
     }
 
-    #main2{
+    #main2 {
         background-image: url(imgs/backgroundDesktop2.png);
     }
 
@@ -554,7 +569,7 @@ footer {
     }
 
     .info p {
-        font-size: 3rem;
+        font-size: 1.6vw;
     }
 
     .text {
@@ -564,32 +579,95 @@ footer {
         margin: 0px;
     }
 
-    #main3 .info p{
+    #main3 .info p {
         text-align: end;
     }
 
-    #main3 .text{
+    #main3 .text {
         align-items: flex-end;
     }
 
-    .text div{
+    .text div {
         width: 45vw;
         display: flex;
         flex-direction: column;
         gap: 2vw;
     }
 
-    .saibaMais{
+    .saibaMais {
         padding: 1vw 2vw;
         font-size: 3rem;
         cursor: pointer;
     }
 
-    .saibaMais:hover{
+    .saibaMais:hover {
         background-color: #d3d3d3;
     }
 
-    #info2{
+    .wrapper {
+        width: 50vw;
+        height: 40vw;
+    }
+
+    #info2 {
         flex-direction: row;
+    }
+
+    #main3 {
+        background-image: url(imgs/backgroundDesktop3.png);
+    }
+
+    #main4 {
+        background-image: url(imgs/backgroundDesktop4.png);
+    }
+
+    #quemSomosTitle {
+        width: 30vw;
+        margin: 2vw auto 1vw;
+    }
+
+    #quemSomosText {
+        font-size: 2.5rem;
+        width: 55vw;
+    }
+
+    #quemSomosDiv {
+        display: flex;
+    }
+
+    .photoDiv {
+        margin: 0px;
+    }
+
+    .photoDiv:last-child {
+        margin-bottom: 0px;
+    }
+
+    .photo {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    #x {
+        padding: 0px;
+        width: 30vw;
+        margin: 0px;
+    }
+
+    .photoDiv p {
+        width: 45%;
+        font-size: 2.3rem;
+        text-align: center;
+        margin: 1.5vw 0px;
+    }
+
+    footer {
+        width: 100vw;
+        height: fit-content;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 1.5vw;
+        font-size: 2.5rem;
     }
 }
