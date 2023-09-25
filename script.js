@@ -15,6 +15,22 @@ saibaMaisBtns.forEach(btns => {
 });
 var parentSlider = ''
 var divSlider = ''
+const linhaDoTempo = document.getElementById("linhaDoTempo")
+linhaDoTempo.addEventListener('click', expand)
+
+function expand(event){
+    let teste = document.getElementById("teste")
+    let sibling = event.target.nextElementSibling
+    let dropDown = document.querySelector("#linhaDoTempo svg")
+    dropDown.style.transition = '400ms'
+    if(sibling.style.height == '' || sibling.style.height == "0px"){
+        sibling.style.height = `${teste.offsetHeight}px`
+        dropDown.style.rotate = '-180deg'
+    } else{
+        sibling.style.height = `0px`
+        dropDown.style.rotate = '0deg'
+    }
+}
 
 function saibaMais(event) {
     parentSlider = event.target.parentElement.parentElement;
