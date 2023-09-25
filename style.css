@@ -479,7 +479,7 @@ footer {
 
 @media only screen and (min-width: 1024px) {
     #main {
-        background-image: url(imgs/backgroundDesktop.png);
+        background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 3%), url('./imgs/backgroundDesktop.png');
     }
 
     #main nav {
@@ -580,7 +580,7 @@ footer {
     }
 
     #main2 {
-        background-image: url(imgs/backgroundDesktop2.png);
+        background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), url(imgs/backgroundDesktop2.png);
     }
 
     .title img {
@@ -646,11 +646,15 @@ footer {
     }
 
     #main3 {
-        background-image: url(imgs/backgroundDesktop3.png);
+        background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), url(imgs/backgroundDesktop3.png);
     }
 
     #main4 {
-        background-image: url(imgs/backgroundDesktop4.png);
+        background-image: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 3%), -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), url(imgs/backgroundDesktop4.png);
+    }
+
+    #main5{
+        background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 5%), -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 2%), url(imgs/backgroundDesktop5.png);
     }
 
     #quemSomosTitle {
