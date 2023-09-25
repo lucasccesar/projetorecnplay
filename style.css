@@ -8,12 +8,8 @@
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
-  height: inherit;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    height: inherit;
 }
 
 html {
@@ -42,6 +38,10 @@ nav {
     justify-content: space-between;
 }
 
+#navDesktop {
+    display: none;
+}
+
 #logo {
     width: 60%;
 }
@@ -53,6 +53,7 @@ nav {
     height: 100vh;
     width: fit-content;
     display: flex;
+
     transition: 600ms;
     z-index: 1000;
 }
@@ -80,19 +81,20 @@ nav {
     overflow: hidden;
 }
 
-#sidebarAnchors a, #linhaDoTempo{
+#sidebarAnchors a,
+#linhaDoTempo {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-#linhaDoTempo{
+#linhaDoTempo {
     background-color: white;
     border: none;
 }
 
-#sla{
+#sla {
     transition: 400ms;
     display: flex;
     justify-content: flex-end;
@@ -101,7 +103,7 @@ nav {
     overflow: hidden;
 }
 
-#teste{
+#teste {
     width: fit-content;
     height: fit-content;
     gap: 2vw;
@@ -109,7 +111,7 @@ nav {
     flex-direction: column;
 }
 
-#teste a{
+#teste a {
     text-decoration: none;
     color: black;
     font-size: 1rem;
@@ -130,7 +132,8 @@ nav {
     font-weight: 200;
 }
 
-#closeSidebar, #menu{
+#closeSidebar,
+#menu {
     overflow: hidden;
 }
 
@@ -280,7 +283,7 @@ nav {
     border-radius: 10px;
 }
 
-.wrapperBg{
+.wrapperBg {
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -288,7 +291,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .wrapper {
@@ -381,7 +384,7 @@ nav {
     align-items: center;
 }
 
-.slider .dragBall span{
+.slider .dragBall span {
     border: 8px solid transparent;
     border-bottom-width: 0px;
     border-right-width: 0px;
@@ -404,7 +407,7 @@ nav {
     height: fit-content;
 }
 
-#main5{
+#main5 {
     background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 5%), url(imgs/backgroundMobile5.png);
     height: fit-content;
 }
@@ -418,7 +421,7 @@ nav {
     margin: 5vw auto 5vw;
 }
 
-.photoDiv{
+.photoDiv {
     width: 90vw;
     height: fit-content;
     display: flex;
@@ -428,7 +431,7 @@ nav {
     margin: auto;
 }
 
-.photo{
+.photo {
     width: 100%;
     height: 60vw;
     background-color: black;
@@ -441,15 +444,15 @@ nav {
     margin-top: 3vw;
 }
 
-.photo + img{
+.photo + img {
     background-color: red;
 }
 
-.photoDiv:last-child{
+.photoDiv:last-child {
     margin-bottom: 10vw;
 }
 
-footer{
+footer {
     width: 100vw;
     height: fit-content;
     background-color: black;
@@ -457,4 +460,136 @@ footer{
     text-align: center;
     padding: 5vw;
     font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #main {
+        background-image: url(imgs/backgroundDesktop.png);
+    }
+
+    #main nav {
+        padding: 2vw 0px;
+        width: 85vw;
+        margin: auto;
+    }
+
+    #main nav span {
+        display: none;
+    }
+
+    #main nav img {
+        width: 20vw;
+    }
+
+    #navDesktop {
+        display: flex;
+        gap: 3vw;
+    }
+
+    #navDesktop a {
+        text-decoration: none;
+        color: black;
+        font-size: 2.5rem;
+    }
+
+    #slider {
+        border: 0.7rem solid white;
+        width: 64vw;
+        height: 40vw;
+    }
+
+    .sliderImage {
+        width: 64vw;
+    }
+
+    #sliderPosition {
+        bottom: 3%;
+    }
+
+    .sliderPositionCount {
+        width: 1vw;
+        height: 1vw;
+    }
+
+    #catalogue {
+        height: 4vw;
+    }
+
+    #catalogue p {
+        font-size: 2.2rem;
+        letter-spacing: 3rem;
+    }
+
+    #sobre {
+        width: 60vw;
+    }
+
+    #sobre img {
+        width: 10vw;
+    }
+
+    #sobre p {
+        font-size: 2.5rem;
+    }
+
+    #main2{
+        background-image: url(imgs/backgroundDesktop2.png);
+    }
+
+    .title img {
+        width: 40vw;
+    }
+
+    .info {
+        display: flex;
+        margin: auto;
+        width: 85vw;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .dressImgs {
+        height: 30vw;
+        width: 50vw;
+    }
+
+    .info p {
+        font-size: 3rem;
+    }
+
+    .text {
+        height: 30vw;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+    }
+
+    #main3 .info p{
+        text-align: end;
+    }
+
+    #main3 .text{
+        align-items: flex-end;
+    }
+
+    .text div{
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .saibaMais{
+        padding: 1vw 2vw;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .saibaMais:hover{
+        background-color: #d3d3d3;
+    }
+
+    #info2{
+        flex-direction: row;
+    }
 }
