@@ -296,7 +296,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 40vh;
+    height: 80vw;
     width: 80vw;
     overflow: hidden;
     background: #fff;
@@ -340,6 +340,7 @@ nav {
     background: none;
     -webkit-appearance: none;
     height: 100%;
+    overflow-y: hidden;
 }
 
 .slider input::-webkit-slider-thumb {
