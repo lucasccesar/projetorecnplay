@@ -411,7 +411,7 @@ nav {
     height: fit-content;
 }
 
-#quemSomosTitle{
+#quemSomosTitle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -494,6 +494,7 @@ footer {
 
     #main nav img {
         width: 20vw;
+        height: fit-content;
     }
 
     #navDesktop {
@@ -501,10 +502,41 @@ footer {
         gap: 3vw;
     }
 
-    #navDesktop a {
+    #navDesktop a,
+    #linhaDoTempoDesktop p {
         text-decoration: none;
         color: black;
         font-size: 2.5rem;
+    }
+
+    #linhaDoTempoDesktop p {
+        display: flex;
+        overflow: hidden;
+    }
+    
+    #linhaDoTempoDesktop p span{
+        overflow: hidden;
+        transition: 400ms;
+    }
+
+    #linhaDoTempoDesktop {
+        display: flex;
+        flex-direction: column;
+        cursor: default;
+    }
+
+    #dropDownDesktop {
+        z-index: 100;
+        margin-top: 0.4vw;
+        height: 0px;
+        transition: 400ms;
+        overflow: hidden;
+    }
+
+    #dropDownDesktop div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4vw;
     }
 
     #slider {

@@ -17,6 +17,25 @@ var parentSlider = ''
 var divSlider = ''
 const linhaDoTempo = document.getElementById("linhaDoTempo")
 linhaDoTempo.addEventListener('click', expand)
+const linhaDoTempoDesktop = document.getElementById("linhaDoTempoDesktop")
+linhaDoTempoDesktop.addEventListener('mouseenter', expandDesktop)
+linhaDoTempoDesktop.addEventListener('mouseleave', shrinkDesktop)
+
+function shrinkDesktop(event){
+    let child = linhaDoTempoDesktop.lastElementChild
+    let childChild = linhaDoTempoDesktop.lastElementChild.firstElementChild
+    child.style.height = `0px`
+    let span = document.querySelector('#linhaDoTempoDesktop p span')
+    span.style.rotate = "0deg"
+}
+
+function expandDesktop(event){
+    let child = linhaDoTempoDesktop.lastElementChild
+    let childChild = linhaDoTempoDesktop.lastElementChild.firstElementChild
+    child.style.height = `${childChild.offsetHeight}px`
+    let span = document.querySelector('#linhaDoTempoDesktop p span')
+    span.style.rotate = "-180deg"
+}
 
 function expand(event){
     let teste = document.getElementById("teste")
