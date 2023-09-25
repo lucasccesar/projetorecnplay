@@ -70,11 +70,11 @@ function saibaMais(event) {
     };
 }
 
-function teste(){
-    console.log(parentSlider)
-    console.log(divSlider)
-    parentSlider.removeChild(divSlider)
-    html.style.overflowY = '';
+function teste(event){
+    if(event.target == divSlider){
+        parentSlider.removeChild(divSlider)
+        html.style.overflowY = '';
+    }
 }
 
 function openSidebar() {
