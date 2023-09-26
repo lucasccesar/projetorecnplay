@@ -542,7 +542,7 @@ footer {
     #slider {
         border: 0.7rem solid white;
         width: 64vw;
-        height: 40vw;
+        height: 32vw;
     }
 
     .sliderImage {
@@ -654,7 +654,7 @@ footer {
     }
 
     #main5{
-        background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 5%), -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 2%), url(imgs/backgroundDesktop5.png);
+        background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 5%), url(imgs/backgroundDesktop5.png);
     }
 
     #quemSomosTitle {
@@ -691,7 +691,7 @@ footer {
     }
 
     .photoDiv p {
-        width: 45%;
+        width: 100%;
         font-size: 2.3rem;
         text-align: center;
         margin: 1.5vw 0px;
