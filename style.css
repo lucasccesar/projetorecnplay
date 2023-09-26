@@ -543,6 +543,7 @@ footer {
         border: 0.7rem solid white;
         width: 64vw;
         height: 32vw;
+        position: relative;
     }
 
     .sliderImage {
@@ -551,6 +552,27 @@ footer {
 
     #sliderPosition {
         bottom: 3%;
+    }
+
+    #sliderBtns{
+        position: absolute;
+        top: 0;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    #sliderBtns button{
+        background-color: #ffffff00;
+        color: white;
+        border: none;
+    }
+
+    #sliderBtns button span{
+        overflow: hidden;
+        font-size: 90px;
     }
 
     .sliderPositionCount {

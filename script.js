@@ -20,6 +20,29 @@ linhaDoTempo.addEventListener('click', expand)
 const linhaDoTempoDesktop = document.getElementById("linhaDoTempoDesktop")
 linhaDoTempoDesktop.addEventListener('mouseenter', expandDesktop)
 linhaDoTempoDesktop.addEventListener('mouseleave', shrinkDesktop)
+const sliderBtns = document.querySelectorAll("#sliderBtns button")
+sliderBtns.forEach(btns => {
+    btns.addEventListener('click', passSlider)
+});
+
+function passSlider(event){
+    console.log(event.target.innerText)
+    let sliderPosition = document.querySelectorAll('.sliderPositionCount');
+    let sliderImage = document.querySelector('.sliderImage');
+    slider.style.transition = "800ms"
+    if(event.target.innerText == "arrow_back_ios" && currentImage > 0){
+        currentImage--
+        slider.style.transform = `translateX(-${sliderImage.offsetWidth * currentImage}px)`
+        sliderPosition[currentImage - 1].classList.remove('sliderPositionSelected');
+        sliderPosition[currentImage - 2].classList.add('sliderPositionSelected');
+    } else if (event.target.innerText == "arrow_forward_ios" && currentImage<3){
+        console.log(sliderImage.offsetWidth, currentImage)
+        currentImage++
+        slider.style.transform = `translateX(-${sliderImage.offsetWidth * currentImage}px)`
+        sliderPosition[currentImage - 1].classList.remove('sliderPositionSelected');
+        sliderPosition[currentImage].classList.add('sliderPositionSelected');
+    }
+}
 
 function shrinkDesktop(event){
     let child = linhaDoTempoDesktop.lastElementChild
