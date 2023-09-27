@@ -2,6 +2,9 @@ const html = document.querySelector('html');
 const menu = document.getElementById('menu');
 menu.addEventListener('click', openSidebar);
 var sidebarOpen = 0;
+const sliderDiv = document.getElementById('slider');
+sliderDiv.addEventListener('mouseenter', arrowsAppear)
+sliderDiv.addEventListener('mouseleave', arrowsDesappear)
 const slider = document.getElementById('sliderPhotos');
 slider.addEventListener('touchstart', onMouseDown);
 slider.addEventListener('touchend', onMouseUp);
@@ -25,28 +28,50 @@ sliderBtns.forEach(btns => {
     btns.addEventListener('click', passSlider)
 });
 
+function arrowsAppear(){
+    document.getElementById("backSlide").classList.add('btnVisible')
+    document.getElementById("forwardSlide").classList.add('btnVisible')
+    let sliderPosition = document.querySelectorAll('.sliderPositionCount');
+    sliderPosition.forEach(element => {
+        element.style.border = "1px solid #FFFFFF"
+    });
+    document.querySelector('.sliderPositionSelected').style.backgroundColor = "#FFFFFF"
+}
+
+function arrowsDesappear(){
+    document.getElementById("backSlide").classList.remove('btnVisible')
+    document.getElementById("forwardSlide").classList.remove('btnVisible')
+    let sliderPosition = document.querySelectorAll('.sliderPositionCount');
+    sliderPosition.forEach(element => {
+        element.style.border = "1px solid #FFFFFF00"
+    });
+    document.querySelector('.sliderPositionSelected').style.backgroundColor = "#FFFFFF00"
+}
+
 function passSlider(event){
-    console.log(event.target.innerText)
     let sliderPosition = document.querySelectorAll('.sliderPositionCount');
     let sliderImage = document.querySelector('.sliderImage');
     slider.style.transition = "800ms"
-    if(event.target.innerText == "arrow_back_ios" && currentImage > 0){
-        currentImage--
-        slider.style.transform = `translateX(-${sliderImage.offsetWidth * currentImage}px)`
-        sliderPosition[currentImage - 1].classList.remove('sliderPositionSelected');
-        sliderPosition[currentImage - 2].classList.add('sliderPositionSelected');
-    } else if (event.target.innerText == "arrow_forward_ios" && currentImage<3){
-        console.log(sliderImage.offsetWidth, currentImage)
+    console.log(currentImage)
+    if((event.target.parentElement.id == "backSlide" || event.target.id == "backSlide") && currentImage > 0){
+        slider.style.transform = `translateX(-${sliderImage.offsetWidth * (currentImage-1)}px)`
+        sliderPosition[currentImage].classList.remove('sliderPositionSelected');
+        sliderPosition[currentImage - 1].classList.add('sliderPositionSelected');
+        currentImage--;
+        sliderPosition[currentImage+1].style.backgroundColor = "#FFFFFF00"
+        sliderPosition[currentImage].style.backgroundColor = "#FFFFFF"
+    } else if ((event.target.parentElement.id == "forwardSlide" || event.target.id == "forwardSlide") && currentImage<3){
         currentImage++
         slider.style.transform = `translateX(-${sliderImage.offsetWidth * currentImage}px)`
         sliderPosition[currentImage - 1].classList.remove('sliderPositionSelected');
         sliderPosition[currentImage].classList.add('sliderPositionSelected');
+        sliderPosition[currentImage-1].style.backgroundColor = "#FFFFFF00"
+        sliderPosition[currentImage].style.backgroundColor = "#FFFFFF"
     }
 }
 
 function shrinkDesktop(event){
     let child = linhaDoTempoDesktop.lastElementChild
-    let childChild = linhaDoTempoDesktop.lastElementChild.firstElementChild
     child.style.height = `0px`
     let span = document.querySelector('#linhaDoTempoDesktop p span')
     span.style.rotate = "0deg"

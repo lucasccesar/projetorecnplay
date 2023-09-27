@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+button{
+    cursor: pointer;
+}
+
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     height: inherit;
@@ -512,6 +516,7 @@ footer {
     #linhaDoTempoDesktop p {
         display: flex;
         overflow: hidden;
+        cursor: pointer;
     }
     
     #linhaDoTempoDesktop p span{
@@ -564,10 +569,12 @@ footer {
         height: 100%;
     }
 
-    #sliderBtns button{
+    .sliderBtn{
         background-color: #ffffff00;
-        color: white;
+        color: #FFFFFF00;
         border: none;
+        visibility: hidden;
+        transition: 200ms;
     }
 
     #sliderBtns button span{
@@ -575,9 +582,17 @@ footer {
         font-size: 90px;
     }
 
+    .btnVisible{
+        visibility: visible;
+        color: #FFFFFF;
+    }
+
     .sliderPositionCount {
+        transition: 200ms;
         width: 1vw;
         height: 1vw;
+        border: 1px solid #FFFFFF00;
+        background-color: #FFFFFF00;
     }
 
     #catalogue {
