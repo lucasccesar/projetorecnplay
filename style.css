@@ -244,6 +244,7 @@ nav {
 .dressImg1 {
     height: 100%;
     width: 60%;
+    background-size: cover;
 }
 
 .dressDiv {
@@ -256,11 +257,13 @@ nav {
 .dressImg2 {
     height: 30%;
     width: 100%;
+    background-size: cover;
 }
 
 .dressImg3 {
     height: 70%;
     width: 100%;
+    background-size: cover;
 }
 
 #dressLimoeiro1{
