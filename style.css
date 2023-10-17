@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -148,6 +148,7 @@ nav {
     border: 3px solid white;
     border-radius: 10px;
     position: relative;
+    overflow-y: hidden;
 }
 
 #sliderPosition {
@@ -266,39 +267,39 @@ nav {
     background-size: cover;
 }
 
-#dressLimoeiro1{
+#dressLimoeiro1 {
     background-image: url(./imgs/limoeiro1.png);
 }
 
-#dressLimoeiro2{
+#dressLimoeiro2 {
     background-image: url(./imgs/limoeiro2.png);
 }
 
-#dressLimoeiro3{
+#dressLimoeiro3 {
     background-image: url(./imgs/limoeiro3.png);
 }
 
-#dressFerro1{
+#dressFerro1 {
     background-image: url(./imgs/ferro1.png);
 }
 
-#dressFerro2{
+#dressFerro2 {
     background-image: url(./imgs/ferro2.png);
 }
 
-#dressFerro3{
+#dressFerro3 {
     background-image: url(./imgs/ferro3.png);
 }
 
-#dressMarco1{
+#dressMarco1 {
     background-image: url(./imgs/marco1.png);
 }
 
-#dressMarco2{
+#dressMarco2 {
     background-image: url(./imgs/marco2.png);
 }
 
-#dressMarco3{
+#dressMarco3 {
     background-image: url(./imgs/marco3.png);
 }
 
@@ -517,14 +518,15 @@ footer {
     font-size: 1.2rem;
 }
 
-#moda{
+#moda {
     background-image: url(./imgs/moda.png);
     background-size: cover;
 }
 
-#mediotec{
+#mediotec {
     background-image: url(./imgs/mt.png);
     background-size: cover;
+    background-position-y: -20px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -564,8 +566,8 @@ footer {
         overflow: hidden;
         cursor: pointer;
     }
-    
-    #linhaDoTempoDesktop p span{
+
+    #linhaDoTempoDesktop p span {
         overflow: hidden;
         transition: 400ms;
     }
@@ -605,7 +607,7 @@ footer {
         bottom: 3%;
     }
 
-    #sliderBtns{
+    #sliderBtns {
         position: absolute;
         top: 0;
         display: flex;
@@ -615,30 +617,30 @@ footer {
         height: 100%;
     }
 
-    .sliderBtn{
+    .sliderBtn {
         background-color: #ffffff00;
-        color: #FFFFFF00;
+        color: #ffffff00;
         border: none;
         visibility: hidden;
         transition: 200ms;
     }
 
-    #sliderBtns button span{
+    #sliderBtns button span {
         overflow: hidden;
         font-size: 90px;
     }
 
-    .btnVisible{
+    .btnVisible {
         visibility: visible;
-        color: #FFFFFF;
+        color: #ffffff;
     }
 
     .sliderPositionCount {
         transition: 200ms;
         width: 1vw;
         height: 1vw;
-        border: 1px solid #FFFFFF00;
-        background-color: #FFFFFF00;
+        border: 1px solid #ffffff00;
+        background-color: #ffffff00;
     }
 
     #catalogue {
@@ -736,7 +738,7 @@ footer {
         background-image: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 3%), -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), url(imgs/backgroundDesktop4.png);
     }
 
-    #main5{
+    #main5 {
         background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 5%), url(imgs/backgroundDesktop5.png);
     }
 
@@ -778,6 +780,10 @@ footer {
         font-size: 2.3rem;
         text-align: center;
         margin: 1.5vw 0px;
+    }
+
+    #mediotec {
+        background-position-y: 0px !important;
     }
 
     footer {
