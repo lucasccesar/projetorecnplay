@@ -27,7 +27,7 @@
 .dressImg1 {
     height: 100%;
     width: 60%;
-    background-color: red;
+    background-size: cover;
 }
 
 .dressDiv {
@@ -40,13 +40,25 @@
 .dressImg2 {
     height: 30%;
     width: 100%;
-    background-color: red;
+    background-size: cover;
 }
 
 .dressImg3 {
     height: 70%;
     width: 100%;
-    background-color: red;
+    background-size: cover;
+}
+
+#dressMarco1 {
+    background-image: url(../../assets/dresses/marco1.png);
+}
+
+#dressMarco2 {
+    background-image: url(../../assets/dresses/marco2.png);
+}
+
+#dressMarco3 {
+    background-image: url(../../assets/dresses/marco3.png);
 }
 
 .text {

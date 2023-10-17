@@ -11,10 +11,10 @@ const Main4 = ({ onSetPonte }) => {
             </div>
             <div className={classes.info}>
                 <div className={classes.dressImgs}>
-                    <div className={classes.dressImg1}></div>
+                    <div className={classes.dressImg1} id={classes.dressMarco1}></div>
                     <div className={classes.dressDiv}>
-                        <div className={classes.dressImg2}></div>
-                        <div className={classes.dressImg3}></div>
+                        <div className={classes.dressImg2} id={classes.dressMarco2}></div>
+                        <div className={classes.dressImg3} id={classes.dressMarco3}></div>
                     </div>
                 </div>
                 <div className={classes.text}>

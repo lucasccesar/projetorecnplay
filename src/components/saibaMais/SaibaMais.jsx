@@ -15,9 +15,12 @@ const SaibaMais = ({ ponte, ponteImgs, onSetPonte }) => {
                 {ReactDOM.createPortal(
                     <div
                         className={classes.wrapperBg}
-                        onClick={() => {
-                            onSetPonte(null);
-                            document.querySelector('*').style.overflowY = 'scroll';
+                        id="wrapperBgDiv"
+                        onClick={(event) => {
+                            if (event.target.id === 'wrapperBgDiv') {
+                                onSetPonte(null);
+                                document.querySelector('*').style.overflowY = 'scroll';
+                            }
                         }}
                     >
                         <div className={classes.wrapper}>

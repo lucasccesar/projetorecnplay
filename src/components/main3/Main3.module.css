@@ -27,7 +27,7 @@
 .dressImg1 {
     height: 100%;
     width: 60%;
-    background-color: red;
+    background-size: cover;
 }
 
 .dressDiv {
@@ -40,13 +40,25 @@
 .dressImg2 {
     height: 30%;
     width: 100%;
-    background-color: red;
+    background-size: cover;
 }
 
 .dressImg3 {
     height: 70%;
     width: 100%;
-    background-color: red;
+    background-size: cover;
+}
+
+#dressFerro1 {
+    background-image: url(../../assets/dresses/ferro1.png);
+}
+
+#dressFerro2 {
+    background-image: url(../../assets/dresses/ferro2.png);
+}
+
+#dressFerro3 {
+    background-image: url(../../assets/dresses/ferro3.png);
 }
 
 .text {

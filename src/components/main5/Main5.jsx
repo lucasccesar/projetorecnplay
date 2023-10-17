@@ -11,12 +11,12 @@ const Main5 = () => {
             <p id={classes.quemSomosText}>Somos estudantes que valorizam a cultura pernambucana; montamos um projeto baseado nas pontes em embelezam a nossa veneza brasileira unindo tecnologia e moda para revolucionar o Recife.</p>
             <div id={classes.quemSomosDiv}>
                 <div className={classes.photoDiv}>
-                    <div className={classes.photo}></div>
+                    <div className={classes.photo} id={classes.mediotec}></div>
                     <p>DESENVOLVEDORES DO MEDIOTEC SENAC</p>
                 </div>
                 <img src={x} alt="X" style={{ height: '30vw' }} id={classes.x} />
                 <div className={classes.photoDiv}>
-                    <div className={classes.photo}></div>
+                    <div className={classes.photo} id={classes.moda}></div>
                     <p>ESTILISTAS DA FACULDADE DE MODA SENAC</p>
                 </div>
             </div>
