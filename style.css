@@ -460,7 +460,7 @@ nav {
     margin: 5vw auto 5vw;
 }
 
-#x {
+#cross {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -519,10 +519,12 @@ footer {
 
 #moda{
     background-image: url(./imgs/moda.png);
+    background-size: cover;
 }
 
 #mediotec{
     background-image: url(./imgs/mt.png);
+    background-size: cover;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -765,7 +767,7 @@ footer {
         width: 30vw;
     }
 
-    #x {
+    #cross {
         padding: 0px;
         width: 30vw;
         margin: 0px;
