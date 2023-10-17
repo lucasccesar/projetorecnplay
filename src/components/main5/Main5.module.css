@@ -58,3 +58,49 @@
 .photoDiv:last-child {
     margin-bottom: 10vw;
 }
+
+@media only screen and (min-width: 1024px) {
+    #main5 {
+        background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 5%), url(../../assets/desktop/backgroundDesktop5.png);
+    }
+
+    #quemSomosTitle {
+        width: 30vw;
+        margin: 2vw auto 1vw;
+    }
+
+    #quemSomosText {
+        font-size: 2.5rem;
+        width: 55vw;
+    }
+
+    #quemSomosDiv {
+        display: flex;
+    }
+
+    .photoDiv {
+        margin: 0px;
+    }
+
+    .photoDiv:last-child {
+        margin-bottom: 0px;
+    }
+
+    .photo {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    #x {
+        padding: 0px;
+        width: 30vw;
+        margin: 0px;
+    }
+
+    .photoDiv p {
+        width: 100%;
+        font-size: 2.3rem;
+        text-align: center;
+        margin: 1.5vw 0px;
+    }
+}

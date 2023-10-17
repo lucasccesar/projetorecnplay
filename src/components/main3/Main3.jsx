@@ -9,7 +9,7 @@ const Main3 = ({ onSetPonte }) => {
             <div className={classes.title}>
                 <img src={ferro} alt="Ponte de Ferro" />
             </div>
-            <div className={classes.info} id="info2">
+            <div className={classes.info} id={classes.info2}>
                 <div className={classes.dressImgs}>
                     <div className={classes.dressImg1}></div>
                     <div className={classes.dressDiv}>

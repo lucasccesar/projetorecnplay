@@ -17,3 +17,63 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
+@media only screen and (min-width: 1024px) {
+    header {
+        padding: 2vw 0px;
+        width: 85vw;
+        margin: auto;
+    }
+
+    .menu {
+        display: none!important;
+    }
+
+    header img {
+        width: 20vw!important;
+        height: fit-content!important;
+    }
+
+    #navDesktop {
+        display: flex;
+        gap: 3vw;
+    }
+
+    #navDesktop a,
+    #linhaDoTempoDesktop p {
+        text-decoration: none;
+        color: black;
+        font-size: 2.5rem;
+    }
+
+    #linhaDoTempoDesktop p {
+        display: flex;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    #linhaDoTempoDesktop p span{
+        overflow: hidden;
+        transition: 400ms;
+    }
+
+    #linhaDoTempoDesktop {
+        display: flex;
+        flex-direction: column;
+        cursor: default;
+    }
+
+    #dropDownDesktop {
+        z-index: 100;
+        margin-top: 0.4vw;
+        height: 0px;
+        transition: 400ms;
+        overflow: hidden;
+    }
+
+    #dropDownDesktop div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4vw;
+    }
+}

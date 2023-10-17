@@ -40,3 +40,15 @@ html {
         transform: rotate(360deg);
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    footer {
+        width: 100vw;
+        height: fit-content;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 1.5vw;
+        font-size: 2.5rem;
+    }
+}

@@ -68,3 +68,72 @@
     padding: 2vw 4vw;
     border-radius: 10px;
 }
+
+@media only screen and (min-width: 1024px) {
+    .main3 .info p {
+        text-align: end !important;
+    }
+
+    .main3 .text {
+        align-items: flex-end;
+    }
+
+    .text div {
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .saibaMais {
+        padding: 1vw 2vw;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .saibaMais:hover {
+        background-color: #d3d3d3;
+    }
+
+    .wrapper {
+        width: 50vw;
+        height: 40vw;
+    }
+
+    #info2 {
+        flex-direction: row;
+    }
+
+    .main3 {
+        background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%), url(../../assets/desktop/backgroundDesktop3.png);
+        flex-direction: row;
+    }
+
+    .title img {
+        width: 40vw;
+    }
+
+    .info {
+        display: flex;
+        margin: auto;
+        width: 85vw;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .dressImgs {
+        height: 30vw;
+        width: 50vw;
+    }
+
+    .info p {
+        font-size: 1.6vw;
+    }
+
+    .text {
+        height: 30vw;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+    }
+}

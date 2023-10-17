@@ -47,3 +47,56 @@
 .sliderPositionSelected {
     background-color: white;
 }
+
+@media only screen and (min-width: 1024px) {
+    #slider {
+        border: 0.7rem solid white;
+        width: 64vw;
+        height: 32vw;
+        position: relative;
+    }
+
+    .sliderImage {
+        width: 64vw;
+    }
+
+    #sliderPosition {
+        bottom: 3%;
+    }
+
+    #sliderBtns{
+        position: absolute;
+        top: 0;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .sliderBtn{
+        background-color: #ffffff00;
+        color: #FFFFFF00;
+        border: none;
+        visibility: hidden;
+        transition: 200ms;
+    }
+
+    #sliderBtns button span{
+        overflow: hidden;
+        font-size: 90px;
+    }
+
+    .btnVisible{
+        visibility: visible;
+        color: #FFFFFF;
+    }
+
+    .sliderPositionCount {
+        transition: 200ms;
+        width: 1vw;
+        height: 1vw;
+        border: 1px solid #FFFFFF00;
+        background-color: #FFFFFF00;
+    }
+}

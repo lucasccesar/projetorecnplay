@@ -6,7 +6,7 @@ import sobre from '../../assets/UI/sobre.svg';
 
 const Main1 = (props) => {
     return (
-        <div id="main1" className={classes.main}>
+        <div id={classes.main} className={classes.main}>
             {props.children}
             <Slider />
             <div id={classes.catalogue}>
