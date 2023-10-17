@@ -517,6 +517,14 @@ footer {
     font-size: 1.2rem;
 }
 
+#moda{
+    background-image: url(./imgs/moda.png);
+}
+
+#mediotec{
+    background-image: url(./imgs/mt.png);
+}
+
 @media only screen and (min-width: 1024px) {
     #main {
         background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 3%), url('./imgs/backgroundDesktop.png');
