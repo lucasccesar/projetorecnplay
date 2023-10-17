@@ -244,7 +244,6 @@ nav {
 .dressImg1 {
     height: 100%;
     width: 60%;
-    background-color: red;
 }
 
 .dressDiv {
@@ -257,13 +256,47 @@ nav {
 .dressImg2 {
     height: 30%;
     width: 100%;
-    background-color: red;
 }
 
 .dressImg3 {
     height: 70%;
     width: 100%;
-    background-color: red;
+}
+
+#dressLimoeiro1{
+    background-image: url(./imgs/limoeiro1.png);
+}
+
+#dressLimoeiro2{
+    background-image: url(./imgs/limoeiro2.png);
+}
+
+#dressLimoeiro3{
+    background-image: url(./imgs/limoeiro3.png);
+}
+
+#dressFerro1{
+    background-image: url(./imgs/ferro1.png);
+}
+
+#dressFerro2{
+    background-image: url(./imgs/ferro2.png);
+}
+
+#dressFerro3{
+    background-image: url(./imgs/ferro3.png);
+}
+
+#dressMarco1{
+    background-image: url(./imgs/marco1.png);
+}
+
+#dressMarco2{
+    background-image: url(./imgs/marco2.png);
+}
+
+#dressMarco3{
+    background-image: url(./imgs/marco3.png);
 }
 
 .text {
