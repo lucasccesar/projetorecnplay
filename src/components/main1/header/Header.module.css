@@ -18,6 +18,15 @@ header {
     justify-content: space-between;
 }
 
+#navDesktop {
+    display: none;
+}
+
+#navDesktop > a,
+#navDesktop p {
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 1024px) {
     header {
         padding: 2vw 0px;
@@ -26,12 +35,12 @@ header {
     }
 
     .menu {
-        display: none!important;
+        display: none !important;
     }
 
     header img {
-        width: 20vw!important;
-        height: fit-content!important;
+        width: 20vw !important;
+        height: fit-content !important;
     }
 
     #navDesktop {
@@ -51,8 +60,8 @@ header {
         overflow: hidden;
         cursor: pointer;
     }
-    
-    #linhaDoTempoDesktop p span{
+
+    #linhaDoTempoDesktop p span {
         overflow: hidden;
         transition: 400ms;
     }

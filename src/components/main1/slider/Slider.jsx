@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect, useEffect } from 'react';
+import React, { useState, useRef, useLayoutEffect, useEffect, Fragment } from 'react';
 
 import classes from './Slider.module.css';
 import sliderImage1 from '../../../assets/UI/sliderImage1.png';
@@ -15,10 +15,19 @@ const Slider = (props) => {
     const [sliderTranslate, setSliderTranslate] = useState(0);
     const [slaArray, setSlaArray] = useState(['sliderPositionSelected', null, null, null]);
 
-    const ref = useRef(null);
+    const [color, setColor] = useState('#FFFFFF00');
+    const [visibility, setVisibility] = useState('hidden');
+    const [isVisible, setIsVisible] = useState(false);
+
+    const refDesktop = useRef(null);
+    const refMobile = useRef(null);
 
     useLayoutEffect(() => {
-        setImageSize(ref.current.offsetWidth);
+        if (refMobile.current.offsetWidth == 0) {
+            setImageSize(refDesktop.current.offsetWidth);
+        } else if (refDesktop.current.offsetWidth == 0) {
+            setImageSize(refMobile.current.offsetWidth);
+        }
     }, []);
 
     const touchStartHandler = (event) => {
@@ -60,35 +69,79 @@ const Slider = (props) => {
         } else if (currentImage == 3) {
             setSlaArray([null, null, null, 'sliderPositionSelected']);
         }
-        console.log(currentImage);
-        console.log(slaArray[0], slaArray[1], slaArray[2], slaArray[3]);
     }, [currentImage]);
 
     return (
-        <div id={classes.slider}>
-            <div id={classes.sliderPhotos} draggable="false" onTouchStart={touchStartHandler} onTouchMove={touchMoveHandler} onTouchEnd={touchEndHandler} style={{ transition: `${transition}ms`, transform: `translateX(${sliderTranslate}px)` }}>
-                <div style={{ backgroundImage: `url('${sliderImage1}')` }} className={classes.sliderImage} ref={ref}></div>
-                <div style={{ backgroundImage: `url('${sliderImage2}')` }} className={classes.sliderImage}></div>
-                <div style={{ backgroundImage: `url('${sliderImage3}')` }} className={classes.sliderImage}></div>
-                <div style={{ backgroundImage: `url('${sliderImage4}')` }} className={classes.sliderImage}></div>
+        <Fragment>
+            <div id={classes.sliderMobile} className={classes.slider}>
+                <div id={classes.sliderPhotos} draggable="false" onTouchStart={touchStartHandler} onTouchMove={touchMoveHandler} onTouchEnd={touchEndHandler} style={{ transition: `${transition}ms`, transform: `translateX(${sliderTranslate}px)` }}>
+                    <div style={{ backgroundImage: `url('${sliderImage1}')` }} className={classes.sliderImage} ref={refMobile}></div>
+                    <div style={{ backgroundImage: `url('${sliderImage2}')` }} className={classes.sliderImage}></div>
+                    <div style={{ backgroundImage: `url('${sliderImage3}')` }} className={classes.sliderImage}></div>
+                    <div style={{ backgroundImage: `url('${sliderImage4}')` }} className={classes.sliderImage}></div>
+                </div>
+                <div id={classes.sliderPosition}>
+                    <div className={`${classes.sliderPositionCount} ${classes[slaArray[0]]}`}></div>
+                    <div className={`${classes.sliderPositionCount} ${classes[slaArray[1]]}`}></div>
+                    <div className={`${classes.sliderPositionCount} ${classes[slaArray[2]]}`}></div>
+                    <div className={`${classes.sliderPositionCount} ${classes[slaArray[3]]}`}></div>
+                </div>
             </div>
-            <div id={classes.sliderPosition}>
-                <div className={`${classes.sliderPositionCount} ${classes[slaArray[0]]}`}></div>
-                <div className={`${classes.sliderPositionCount} ${classes[slaArray[1]]}`}></div>
-                <div className={`${classes.sliderPositionCount} ${classes[slaArray[2]]}`}></div>
-                <div className={`${classes.sliderPositionCount} ${classes[slaArray[3]]}`}></div>
+
+            <div
+                id={classes.sliderDesktop}
+                className={classes.slider}
+                onMouseEnter={() => {
+                    setColor('#FFFFFF');
+                    setVisibility('visible');
+                    setIsVisible(true);
+                }}
+                onMouseLeave={() => {
+                    setColor('#FFFFFF00');
+                    setVisibility('hidden');
+                    setIsVisible(false);
+                }}
+            >
+                <div id={classes.sliderPhotos} draggable="false" style={{ transition: `${transition * 2}ms`, transform: `translateX(${sliderTranslate}px)` }}>
+                    <div style={{ backgroundImage: `url('${sliderImage1}')` }} className={classes.sliderImage} ref={refDesktop}></div>
+                    <div style={{ backgroundImage: `url('${sliderImage2}')` }} className={classes.sliderImage}></div>
+                    <div style={{ backgroundImage: `url('${sliderImage3}')` }} className={classes.sliderImage}></div>
+                    <div style={{ backgroundImage: `url('${sliderImage4}')` }} className={classes.sliderImage}></div>
+                </div>
+                <div id={classes.sliderPosition}>
+                    <div className={`${classes.sliderPositionCount} ${isVisible == true ? classes[slaArray[0]] : ''}`} style={{ border: `1px solid ${color}` }}></div>
+                    <div className={`${classes.sliderPositionCount} ${isVisible == true ? classes[slaArray[1]] : ''}`} style={{ border: `1px solid ${color}` }}></div>
+                    <div className={`${classes.sliderPositionCount} ${isVisible == true ? classes[slaArray[2]] : ''}`} style={{ border: `1px solid ${color}` }}></div>
+                    <div className={`${classes.sliderPositionCount} ${isVisible == true ? classes[slaArray[3]] : ''}`} style={{ border: `1px solid ${color}` }}></div>
+                </div>
+                <div id={classes.sliderBtns}>
+                    <button
+                        style={{ paddingLeft: '1vw', color: color, visibility: visibility }}
+                        id={classes.backSlide}
+                        className={classes.sliderBtn}
+                        onClick={() => {
+                            sliderTranslate < 0 && setSliderTranslate((sliderTranslate) => sliderTranslate + imageSize);
+                            sliderTranslate < 0 && setCurrentImage((currentImage) => currentImage - 1);
+                        }}
+                    >
+                        <span className="material-symbols-rounded"> arrow_back_ios </span>
+                    </button>
+                    <button
+                        style={{ paddingRight: '1vw', color: color, visibility: visibility }}
+                        id={classes.forwardSlide}
+                        className={classes.sliderBtn}
+                        onClick={() => {
+                            sliderTranslate > imageSize * 3 * -1 && setSliderTranslate((sliderTranslate) => sliderTranslate - imageSize);
+                            sliderTranslate > imageSize * 3 * -1 && setCurrentImage((currentImage) => currentImage + 1);
+                        }}
+                    >
+                        <span className="material-symbols-rounded" style={{ rotate: '180deg' }}>
+                            arrow_back_ios
+                        </span>
+                    </button>
+                </div>
             </div>
-            <div id={classes.sliderBtns}>
-                <button style={{ paddingLeft: '1vw' }} id={classes.backSlide} className={classes.sliderBtn}>
-                    <span className="material-symbols-rounded"> arrow_back_ios </span>
-                </button>
-                <button style={{ paddingRight: '1vw' }} id={classes.forwardSlide} className={classes.sliderBtn}>
-                    <span className="material-symbols-rounded" style={{ rotate: '180deg' }}>
-                        arrow_back_ios
-                    </span>
-                </button>
-            </div>
-        </div>
+        </Fragment>
     );
 };
 

@@ -4,7 +4,15 @@
     overflow-x: hidden;
 }
 
-#slider {
+#sliderMobile {
+    display: block;
+}
+
+#sliderDesktop {
+    display: none;
+}
+
+.slider {
     width: 80vw;
     height: 50vw;
     background-color: #ffffff00;
@@ -49,7 +57,15 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    #slider {
+    #sliderMobile {
+        display: none;
+    }
+
+    #sliderDesktop {
+        display: block;
+    }
+
+    .slider {
         border: 0.7rem solid white;
         width: 64vw;
         height: 32vw;
@@ -64,7 +80,7 @@
         bottom: 3%;
     }
 
-    #sliderBtns{
+    #sliderBtns {
         position: absolute;
         top: 0;
         display: flex;
@@ -74,29 +90,35 @@
         height: 100%;
     }
 
-    .sliderBtn{
+    .sliderBtn {
         background-color: #ffffff00;
-        color: #FFFFFF00;
+        color: #ffffff00;
         border: none;
         visibility: hidden;
         transition: 200ms;
+        cursor: pointer;
     }
 
-    #sliderBtns button span{
+    #sliderBtns button span {
         overflow: hidden;
         font-size: 90px;
     }
 
-    .btnVisible{
+    .btnVisible {
         visibility: visible;
-        color: #FFFFFF;
+        color: #ffffff;
     }
 
     .sliderPositionCount {
         transition: 200ms;
         width: 1vw;
         height: 1vw;
-        border: 1px solid #FFFFFF00;
-        background-color: #FFFFFF00;
+        border: 1px solid #ffffff00;
+        background-color: #ffffff00;
+    }
+
+    .sliderPositionSelected {
+        background-color: white !important;
+        visibility: visible;
     }
 }

@@ -12,92 +12,97 @@
 }
 
 #sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: fit-content;
-    display: flex;
-
-    transition: 600ms;
-    z-index: 1000;
-}
-
-#sidebarHalf1 {
-    position: relative;
-    width: 40vw;
-    background-color: white;
-}
-
-#sidebarHalf2 {
     display: none;
-    width: 100vw;
-    background-color: #00000090;
 }
 
-#sidebarAnchors {
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    gap: 2vh;
-    overflow: hidden;
-}
+@media only screen and (max-width: 1024px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: fit-content;
+        display: flex;
+        transition: 600ms;
+        z-index: 1000;
+    }
 
-#sidebarAnchors a,
-#linhaDoTempo {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
+    #sidebarHalf1 {
+        position: relative;
+        width: 40vw;
+        background-color: white;
+    }
 
-#linhaDoTempo {
-    background-color: white;
-    border: none;
-}
+    #sidebarHalf2 {
+        display: none;
+        width: 100vw;
+        background-color: #00000090;
+    }
 
-#sla {
-    transition: 400ms;
-    display: flex;
-    justify-content: flex-end;
-    height: 0px;
-    overflow: hidden;
-}
+    #sidebarAnchors {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        gap: 2vh;
+        overflow: hidden;
+    }
 
-#teste {
-    width: fit-content;
-    height: fit-content;
-    gap: 2vw;
-    display: flex;
-    flex-direction: column;
-}
+    #sidebarAnchors a,
+    #linhaDoTempo {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 
-#teste a {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    font-weight: normal;
-}
+    #linhaDoTempo {
+        background-color: white;
+        border: none;
+    }
 
-.anchor {
-    display: block;
-    height: 115px; /*same height as header*/
-    margin-top: -115px; /*same height as header*/
-    visibility: hidden;
-}
+    #sla {
+        transition: 400ms;
+        display: flex;
+        justify-content: flex-end;
+        height: 0px;
+        overflow: hidden;
+    }
 
-#closeSidebar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-weight: 200;
-}
+    #teste {
+        width: fit-content;
+        height: fit-content;
+        gap: 2vw;
+        display: flex;
+        flex-direction: column;
+    }
 
-#closeSidebar,
-#menu {
-    overflow: hidden;
+    #teste a {
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .anchor {
+        display: block;
+        height: 115px; /*same height as header*/
+        margin-top: -115px; /*same height as header*/
+        visibility: hidden;
+    }
+
+    #closeSidebar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: 200;
+    }
+
+    #closeSidebar,
+    #menu {
+        overflow: hidden;
+    }
 }

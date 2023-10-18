@@ -39,7 +39,6 @@ const Sidebar = (props) => {
         } else {
             dispatch({ type: 'close' });
         }
-        console.log('expand');
     };
 
     const [testeHeight, setTesteHeight] = useState('0vw');

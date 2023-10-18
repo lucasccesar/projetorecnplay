@@ -148,4 +148,11 @@
         justify-content: space-between;
         margin: 0px;
     }
+
+    .text div {
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
 }
